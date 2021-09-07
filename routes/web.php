@@ -16,10 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-// Route::get('ajax-file-upload-progress-bar', 'ProgressBarUploadFileController@index');
-// Route::post('store', 'ProgressBarUploadFileController@store');
 
-
-Route::get('/upload-form', 'ProgressBarUploadFileController@index');
-Route::any('/upload', 'ProgressBarUploadFileController@upload');
-
+Route::get('/test', function () {
+    return view('welcome');
+})->middleware('VerifyAPIAccess');
